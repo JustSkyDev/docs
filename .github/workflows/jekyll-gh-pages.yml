@@ -2,7 +2,6 @@
 name: Deploy Jekyll with GitHub Pages dependencies preinstalled
 
 
-
 on:
   # Runs on pushes targeting the default branch
   push:
@@ -39,6 +38,8 @@ jobs:
           destination: ./_site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
+      - name: Jekyll remote theme
+        uses: pages-themes/slate@v0.2.0
 
 
   
