@@ -42,13 +42,11 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v3
-      - name: Install Ruby
-        run: sudo apt-get install ruby-full build-essential
       - name: Install Jekyll
         run: gem install jekyll bundler
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default
-        run: jekyll serve
+        run: jekyll build
         env:
           JEKYLL_ENV: production
       - name: Upload artifact
