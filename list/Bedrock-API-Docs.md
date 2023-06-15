@@ -398,6 +398,7 @@ entity.getTagStartsWith(tag);
 
 ### PlayerClass
 - Include [EntityClass](#entityclass) methods
+
 ```javascript
 /**
  * Player class 
@@ -440,7 +441,7 @@ player.getItems();
 
 ### FormClass
 - [ServerUI Docs](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server-ui/minecraft-server-ui)
-- 
+
 ```javascript
 /**
  * Form builder 
@@ -555,6 +556,7 @@ failed.InvalidCommand(playerObj, cname);
 ## ⚙️ Functions
 ### Form 
 - `SendActiveForm(formId, player)`
+
 ```javascript
 /**
  * Send active form
