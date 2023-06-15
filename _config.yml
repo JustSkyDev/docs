@@ -6,3 +6,6 @@ plugins:
 - jekyll-remote-theme
 
 show_downloads: ["false"]
+
+github: 
+  repository_url: https://JustSkyDev/Bedrock-API
