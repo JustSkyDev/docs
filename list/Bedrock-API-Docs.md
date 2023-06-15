@@ -565,6 +565,8 @@ const failed = new FailedClass();
 failed.InvalidCommand(playerObj, cname);
 ```
 
+([Back to Top](#))
+
 <br />
 
 ## ⚙️ Functions
@@ -668,3 +670,5 @@ World.getOnlinePlayers(true); // return number
  */
 const onlinePlayer = World.getOnlinePlayers().join(", "); // return "player 1", "player 2", "player 3"...
 ```
+
+([Back to Top](#))
