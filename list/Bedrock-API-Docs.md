@@ -124,8 +124,8 @@
 
 ## 🛠️ Classes
 ### CommandClass
-```javascipt
-/** 
+```javascript
+/**
  * BuildCommand
  * registration is from CommandRegistration
  * callback is a function 
@@ -151,8 +151,9 @@ Command.getPrefix();
  */
 Command.setPrefix(prefix);
 ```
+
 ### CommandRegistration
-```javascipt
+```javascript
 /**
  * Register command 
  * setName : Set command name - Required 
@@ -180,7 +181,7 @@ new CommandRegistration()
   });
 ```
 ### CooldownClass
-```javascipt
+```javascript
 /**
  * Create new cooldown 
  * name : Set cooldown name
@@ -202,4 +203,35 @@ cd.isActive();
  * Get cooldown remaining time
  */
 cd.getCooldown();
+```
+
+### Collection
+```javascript
+/**
+ * Map extension 
+ * name : Collection name 
+ */
+new Collection(name);
+```
+
+### Database
+```javascript
+/**
+ * Much the same as Map works, but it's scoreboard based
+ * name : Database name
+ */
+const db = new Database(name);
+
+/**
+ * Set data to Database
+ * key : Data key 
+ * value : Data
+ */
+db.set(key, value);
+
+/**
+ * Get data from Database
+ * key : Data key
+ */
+db.get(key);
 ```
