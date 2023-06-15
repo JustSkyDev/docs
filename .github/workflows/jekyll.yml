@@ -45,8 +45,8 @@ jobs:
       - name: Install Jekyll
         run: gem install jekyll bundler
       - name: Build with Jekyll
-        # Outputs to the './_site' directory by default
-        run: jekyll build
+        # Outputs to the './_site' directobundle exec jekyll servery by default
+        run: bundle exec jekyll serve
         env:
           JEKYLL_ENV: production
       - name: Upload artifact
