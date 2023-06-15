@@ -39,6 +39,14 @@ jobs:
           destination: ./_site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
+      - name: Jupyter Minimal Mistakes
+        uses: ptmerz/jupyter-minimal-mistakes@v1.0.0
+
+  # You may pin to the exact commit or the version.
+
+  # uses: ptmerz/jupyter-minimal-mistakes@c4811db7340676fd0c772c7a437ab52f274e57e8
+
+  
 
   # Deployment job
   deploy:
@@ -51,3 +59,4 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
+    
