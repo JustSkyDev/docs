@@ -28,7 +28,7 @@
       <a href="#information"> Information </a>
     </li>
     <li> 
-      <a href="#import-usage"> Import usage </a>
+      <a href="#import-guide"> Import guide </a>
     </li>
   </ul>
 
