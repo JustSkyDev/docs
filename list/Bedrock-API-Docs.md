@@ -123,7 +123,7 @@
 <br />
 
 ## 🛠️ Classes
-### CommandClass ([Back to top](#))
+### CommandClass
 ```javascript
 /**
  * BuildCommand
@@ -152,7 +152,7 @@ Command.getPrefix();
 Command.setPrefix(prefix);
 ```
 
-### CommandRegistration ([Back to top](#))
+### CommandRegistration
 ```javascript
 /**
  * Register command 
@@ -180,7 +180,7 @@ new CommandRegistration()
     1: ["boolean"],
   });
 ```
-### CooldownClass ([Back to top](#))
+### CooldownClass
 ```javascript
 /**
  * Create new cooldown 
@@ -205,7 +205,7 @@ cd.isActive();
 cd.getCooldown();
 ```
 
-### Collection ([Back to top](#))
+### Collection
 ```javascript
 /**
  * Map extension 
@@ -215,7 +215,7 @@ cd.getCooldown();
 new Collection(name);
 ```
 
-### Database ([Back to top](#))
+### Database
 ```javascript
 /**
  * Much the same as Map works, but it's scoreboard based
