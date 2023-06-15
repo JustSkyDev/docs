@@ -183,6 +183,7 @@ Command.getPrefix();
 Command.setPrefix(prefix);
 ```
 
+<br />
 ### CommandRegistration
 ```javascript
 /**
@@ -211,6 +212,8 @@ new CommandRegistration()
     1: ["boolean"],
   });
 ```
+
+<br />
 ### CooldownClass
 ```javascript
 /**
@@ -236,6 +239,7 @@ cd.isActive();
 cd.getCooldown();
 ```
 
+<br />
 ### Collection
 ```javascript
 /**
@@ -246,6 +250,7 @@ cd.getCooldown();
 new Collection(name);
 ```
 
+<br />
 ### Database
 ```javascript
 /**
@@ -300,6 +305,7 @@ db.hasKey(key);
 db.entries();
 ```
 
+<br />
 ### AfterEvents
 - #### Event list
 - blockBreak
@@ -336,6 +342,7 @@ db.entries();
 AfterEvents.on(event, callback);
 ```
 
+<br />
 ### BeforeEvents
 - #### Event list
 - chat
@@ -355,6 +362,7 @@ AfterEvents.on(event, callback);
 BeforeEvents.on(event, callback);
 ```
 
+<br />
 ### SystemEvents
 - #### Event list
 - beforeWatchdog 
@@ -369,6 +377,7 @@ BeforeEvents.on(event, callback);
 SystemEvents.on(event, callback);
 ```
 
+<br />
 ### EntityClass
 ```javascript
 /**
@@ -396,6 +405,7 @@ entity.hasTag(tag);
 entity.getTagStartsWith(tag);
 ```
 
+<br />
 ### PlayerClass
 - Include [EntityClass](#entityclass) methods
 
@@ -439,6 +449,7 @@ player.getRightItem();
 player.getItems();
 ```
 
+<br />
 ### FormClass
 - [ServerUI Docs](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server-ui/minecraft-server-ui)
 
@@ -485,6 +496,7 @@ const ui = new FormClass("action")
   .then((response) => {});
 ```
 
+<br />
 ### ChatClass
 ```javascript
 /**
@@ -520,6 +532,7 @@ chat.runCommand(cmd);
 chat.runCommands(cmds);
 ```
 
+<br />
 ### ErrorClass
 ```javascript
 /**
@@ -536,6 +549,7 @@ const error = new ErrorClass();
 error.CustomError(classname, where, stack);
 ```
 
+<br />
 ### FailedClass
 ```javascript
 /**
@@ -566,6 +580,7 @@ failed.InvalidCommand(playerObj, cname);
 const activeForm = Form.SendActiveForm(formId, playerObj);
 ```
 
+<br />
 ### Formatter
 - `rainbowText(text)`
 - `metricNumbers(number)`
@@ -580,6 +595,7 @@ const activeForm = Form.SendActiveForm(formId, playerObj);
 const raimbow = Formatter.rainbowText("hello world");
 ```
 
+<br />
 ### MS
 - `Format(number, { compactDuration, fullDuration, avoidDuration })`
 - `toMiliseconds(number)`
@@ -592,6 +608,7 @@ const raimbow = Formatter.rainbowText("hello world");
 const ms = MS.Format(1000);
 ```
 
+<br />
 ### Timer 
 - `setTickInterval(callback, tick)`
 - `setTickTimeout(callback, tick)`
@@ -614,6 +631,7 @@ const interval = Timer.setTickInterval(() => {
 Timer.clearTick(interval);
 ```
 
+<br />
 ### Validation
 - `isString(string)`
 - `isNumber(number)`
@@ -635,6 +653,7 @@ Validation.isArray(array); // return true
 Validation.isArray(obj); // return false
 ```
 
+<br />
 ### World
 - `getOnlinePlayers(asNumber?)`
 
