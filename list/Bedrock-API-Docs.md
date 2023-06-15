@@ -123,7 +123,7 @@
 <br />
 
 ## 🛠️ Classes
-### CommandClass
+### CommandClass ([Back to top](#))
 ```javascript
 /**
  * BuildCommand
@@ -152,7 +152,7 @@ Command.getPrefix();
 Command.setPrefix(prefix);
 ```
 
-### CommandRegistration
+### CommandRegistration ([Back to top](#))
 ```javascript
 /**
  * Register command 
@@ -180,7 +180,7 @@ new CommandRegistration()
     1: ["boolean"],
   });
 ```
-### CooldownClass
+### CooldownClass ([Back to top](#))
 ```javascript
 /**
  * Create new cooldown 
