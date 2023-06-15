@@ -24,7 +24,7 @@
   <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
   
   <p>
-    <h2> Classes </h2>
+    <h2> 🛠️ Classes </h2>
   </p>
   <ul>
     <li>
@@ -92,29 +92,114 @@
     </li>
   </ul>
   
-  <br />
   <p> 
-    <h2> Functions </h2>
+    <h2> ⚙️ Functions </h2>
   </p>
   <ul>
     <li>
-      <a href="#form" style="text-decoration: none; color: green;"> Form </a>
+      <a href="#form" style="text-decoration: none"> Form </a>
     </li>
     <li>
-      <a href="#formatter" style="text-decoration: none; color: green;"> Formatter </a>
+      <a href="#formatter" style="text-decoration: none"> Formatter </a>
     </li>
     <li>
-      <a href="#ms" style="text-decoration: none; color: green;"> MS </a>
+      <a href="#ms" style="text-decoration: none"> MS </a>
     </li>
     <li>
-      <a href="#timer" style="text-decoration: none; color: green;"> Timer </a>
+      <a href="#timer" style="text-decoration: none"> Timer </a>
     </li>
     <li>
-      <a href="#validation" style="text-decoration: none; color: green;"> Validation </a>
+      <a href="#validation" style="text-decoration: none"> Validation </a>
     </li>
     <li>
-      <a href="#world" style="text-decoration: none; color: green;"> World </a>
+      <a href="#world" style="text-decoration: none"> World </a>
     </li>
   </ul>
 </details>
 
+## Information
+`Default command Prefix is: "!"`
+
+<br />
+
+## 🛠️ Classes
+### CommandClass
+```javascipt
+/** 
+ * BuildCommand
+ * registration is from CommandRegistration
+ * callback is a function 
+ * callback.inputs : Get input
+ * callback.raw : Get raw packets from ChatSendEvent
+ * callback.DB : Get used database (GlobalDB)
+ * callback.allCommandRegistration : Get all command registration
+ * callback.sender : Get sender player
+ * callback.config : Get config from config.js
+ */
+Command.BuildCommand(registration, callback);
+
+/**
+ * getPrefix
+ * Get current prefix
+ */
+Command.getPrefix();
+
+/**
+ * setPrefix()
+ * Set command prefix, don't forget to run /reload after updating prefix
+ * prefix : What prefix want you use (string)
+ */
+Command.setPrefix(prefix);
+```
+### CommandRegistration
+```javascipt
+/**
+ * Register command 
+ * setName : Set command name - Required 
+ * setDescription : Set command description - Optional
+ * setCategory : Set command category - Optional
+ * setPrivate : If true, only player with OP perm can access it - Optional 
+ * setRequireTags : Only players with certain tags can access it - Optional
+ * setAliases : Set command aliases - Optional
+ * setUsage : How to use the command - Optional
+ * setExample : Give example how to use the command - Optional
+ * setInputs : Set command inputs, available types "string, boolean, number, playername" - Optional
+ */
+new CommandRegistration()
+  .setName("commandName")
+  .setDescription("Command description")
+  .setCategory("Category")
+  .setPrivate(false)
+  .setRequireTags(["tags"])
+  .setAliases(["command", "name"])
+  .setUsage(["command usage"])
+  .setExample(["command example"])
+  .setInputs({
+    0: ["playername"],
+    1: ["boolean"],
+  });
+```
+### CooldownClass
+```javascipt
+/**
+ * Create new cooldown 
+ * name : Set cooldown name
+ */
+const cd = new CooldownClass(name);
+
+/**
+ * Start cooldown 
+ * duration : Cooldown duration 
+ */
+cd.start(duration);
+
+/**
+ * Get cooldown status
+ */
+cd.isActive();
+
+/**
+ * Get cooldown remaining time
+ */
+cd.getCooldown();
+```
