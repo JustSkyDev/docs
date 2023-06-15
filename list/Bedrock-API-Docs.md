@@ -210,6 +210,7 @@ cd.getCooldown();
 /**
  * Map extension 
  * name : Collection name 
+ * added : find(callback)
  */
 new Collection(name);
 ```
