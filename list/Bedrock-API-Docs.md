@@ -214,7 +214,7 @@ cd.getCooldown();
 new Collection(name);
 ```
 
-### Database
+### Database ([Back to top](#))
 ```javascript
 /**
  * Much the same as Map works, but it's scoreboard based
