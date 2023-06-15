@@ -3,7 +3,7 @@
 <!-- LOGO -->
 <div align="center">
 
-  ![Bedrock-API](https://socialify.git.ci/JustSkyDev/Bedrock-API/image?description=1&descriptionEditable=Minecraft%20Bedrock%20Custom%20Scripting%20API&font=Source%20Code%20Pro&forks=1&issues=1&logo=https%3A%2F%2Fraw.githubusercontent.com%2FJustSkyDev%2FBedrock-API%2Fmain%2Fpack_icon.png&name=1&owner=1&pattern=Circuit%20Board&pulls=1&stargazers=1&theme=Light)
+  <img src="https://socialify.git.ci/JustSkyDev/Bedrock-API/image?description=1&descriptionEditable=Minecraft%20Bedrock%20Custom%20Scripting%20API&font=Source%20Code%20Pro&forks=1&issues=1&logo=https%3A%2F%2Fraw.githubusercontent.com%2FJustSkyDev%2FBedrock-API%2Fmain%2Fpack_icon.png&name=1&owner=1&pattern=Circuit%20Board&pulls=1&stargazers=1&theme=Light" alt="Bedrock-API" />
 
   <h3 align="center"><u>Bedrock API Documentation</u></h3>
 
@@ -23,8 +23,14 @@
 <details open="open">
   <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
   
-  - [Information](#information)
-  - [Import guide](#import-guide)
+  <ul>
+    <li> 
+      <a href="#information"> Information </a>
+    </li>
+    <li> 
+      <a href="#import-usage"> Import usage </a>
+    </li>
+  </ul>
 
   <p>
     <h2> 🛠️ Classes </h2>
@@ -129,19 +135,21 @@ I have included all the modules here in the `class.chain.js` file in the `plugin
 
 ## Import guide
 - from `class.chain.js`
-  ```javascript
-  /**
-   * Replace className with the name of the module you want to add 
-   */
-  import { className } from "./class.chain.js";
-  ```
+
+```javascript
+/**
+ * Replace className with the name of the module you want to add 
+ */
+import { className } from "./class.chain.js";
+```
 - from `@modules/export.modules.js`
-  ```javascript
-  /**
-   * Replace className with the name of the module you want to add 
-   */
-  import { className } from "./@modules/export.modules.js";
-  ```
+
+```javascript
+/**
+ * Replace className with the name of the module you want to add 
+ */
+import { className } from "./@modules/export.modules.js";
+```
 
 <br />
 
@@ -318,6 +326,7 @@ db.entries();
 - projectileHit
 - weatherChange
 - worldInitialize
+
 ```javascript
 /**
  * After events
@@ -336,6 +345,7 @@ AfterEvents.on(event, callback);
 - itemUse
 - itemUseOn
 - pistonActivate
+
 ```javascript
 /**
  * Before events 
@@ -349,6 +359,7 @@ BeforeEvents.on(event, callback);
 - #### Event list
 - beforeWatchdog 
 - scriptEvent
+
 ```javascript
 /**
  * System events 
@@ -429,6 +440,7 @@ player.getItems();
 
 ### FormClass
 - [ServerUI Docs](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server-ui/minecraft-server-ui)
+- 
 ```javascript
 /**
  * Form builder 
@@ -558,6 +570,7 @@ const activeForm = Form.SendActiveForm(formId, playerObj);
 - `thousandsSeparator(text)`
 - `EncryptText(text)`
 - `DecryptText(text)`
+
 ```javascript
 /**
  * Example 
@@ -569,6 +582,7 @@ const raimbow = Formatter.rainbowText("hello world");
 - `Format(number, { compactDuration, fullDuration, avoidDuration })`
 - `toMiliseconds(number)`
 - `toDuration(number, { compactDuration, fullDuration, avoidDuration })`
+
 ```javascript
 /**
  * Example 
@@ -582,6 +596,7 @@ const ms = MS.Format(1000);
 - `setInfinityLoop(callback)`
 - `sleep(tick)`
 - `clearTick(timerId)`
+
 ```javascript
 /**
  * Example 
@@ -607,6 +622,7 @@ Timer.clearTick(interval);
 - `isNull(null)`
 - `isUndefined(undefined)`
 - `isError(Error)`
+
 ```javascript
 /**
  * Example 
@@ -619,6 +635,7 @@ Validation.isArray(obj); // return false
 
 ### World
 - `getOnlinePlayers(asNumber?)`
+
 ```javascript
 /**
  * Example, online player counter
