@@ -205,7 +205,7 @@ cd.isActive();
 cd.getCooldown();
 ```
 
-### Collection
+### Collection ([Back to top](#))
 ```javascript
 /**
  * Map extension 
