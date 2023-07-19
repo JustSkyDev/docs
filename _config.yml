@@ -1,7 +1,7 @@
-title: [JustSkyDev]
-description: [Docs Libs]
+title: JustSkyDev
+description: Docs Libs
 
-remote_theme: pages-themes/hacker@v0.2.0
+remote_theme: CloudCannon/edition-jekyll-template@latest
 plugins:
 - jekyll-remote-theme
 
