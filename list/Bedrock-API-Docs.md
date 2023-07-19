@@ -140,7 +140,7 @@ I have included all the modules here in the `class.chain.js` file in the `plugin
 /**
  * Replace className with the name of the module you want to add 
  */
-import { className } from "./class.chain.js";
+import { className } from "./@modules";
 ```
 - from `@modules/export.modules.js`
 
@@ -148,7 +148,7 @@ import { className } from "./class.chain.js";
 /**
  * Replace className with the name of the module you want to add 
  */
-import { className } from "./@modules/export.modules.js";
+import { className } from "./@modules/modules";
 ```
 
 <br />
@@ -184,7 +184,9 @@ Command.setPrefix(prefix);
 ```
 
 <br />
+
 ### CommandRegistration
+
 ```javascript
 /**
  * Register command 
@@ -214,13 +216,14 @@ new CommandRegistration()
 ```
 
 <br />
+
 ### CooldownClass
+
 ```javascript
 /**
  * Create new cooldown 
- * name : Set cooldown name
  */
-const cd = new CooldownClass(name);
+const cd = new CooldownClass();
 
 /**
  * Start cooldown 
@@ -240,18 +243,25 @@ cd.getCooldown();
 ```
 
 <br />
+
 ### Collection
+
 ```javascript
 /**
  * Map extension 
- * name : Collection name 
- * added : find(callback)
  */
-new Collection(name);
+const coll = new Collection();
+
+/**
+ * With "find" function
+ */
+coll.find(function () {});
 ```
 
 <br />
+
 ### Database
+
 ```javascript
 /**
  * Much the same as Map works, but it's scoreboard based
@@ -265,6 +275,13 @@ const db = new Database(name);
  * value : Data
  */
 db.set(key, value);
+
+/**
+ * Push new data to database 
+ * key : Data key 
+ * value : Data
+ */
+db.push(key, value)
 
 /**
  * Get data from Database
@@ -286,12 +303,12 @@ db.reset();
 /**
  * Get values
  */
-db.getValues();
+db.values();
 
 /**
  * Get keys
  */
-db.getKeys();
+db.keys();
 
 /**
  * Has key
@@ -306,30 +323,44 @@ db.entries();
 ```
 
 <br />
+
 ### AfterEvents
-- #### Event list
+- ### Event list
 - blockBreak
 - blockExplode
 - blockPlace
 - buttonPush
+- chat
+- dataDrivenEntity
 - effectAdd
 - entityDie
-- entityHit
+- entityHealthChanged
+- entityHitBlock
+- entityHitEntity
 - entityHurt
 - entityRemoved
 - entitySpawn
-- itemCompleteCharge
-- itemReleaseCharge
-- itemStartCharge
+- explosion
+- itemCompleteUse
+- itemDefinition
+- itemReleaseUse
+- itemStartUse
 - itemStartUseOn
-- itemStopCharge
+- itemStopUse
 - itemStopUseOn
-- leverActivate
-- messageRecieve
+- itemUse
+- itemUseOn
+- leverAction
+- messageReceive
+- pistonActivate
 - playerJoin
 - playerLeave
 - playerSpawn
+- pressurePlatePop
+- pressurePlatePush
 - projectileHit
+- targetBlockHit
+- tripWireTrip
 - weatherChange
 - worldInitialize
 
@@ -343,6 +374,7 @@ AfterEvents.on(event, callback);
 ```
 
 <br />
+
 ### BeforeEvents
 - #### Event list
 - chat
@@ -363,10 +395,11 @@ BeforeEvents.on(event, callback);
 ```
 
 <br />
+
 ### SystemEvents
 - #### Event list
-- beforeWatchdog 
-- scriptEvent
+- watchdogTerminate
+- scriptEventReceive
 
 ```javascript
 /**
@@ -378,6 +411,7 @@ SystemEvents.on(event, callback);
 ```
 
 <br />
+
 ### EntityClass
 ```javascript
 /**
@@ -406,6 +440,7 @@ entity.getTagStartsWith(tag);
 ```
 
 <br />
+
 ### PlayerClass
 - Include [EntityClass](#entityclass) methods
 
@@ -447,9 +482,52 @@ player.getRightItem();
  * Get all items in inventory including air
  */
 player.getItems();
+
+/**
+ * Get player object from player name
+ * pname : Player name
+ */
+player.getPlayerObjectFromName(pname);
+
+/**
+ * Get needed xp to level up
+ */
+player.needXpToLevelUp();
+
+/**
+ * Get earned xp at current level
+ */
+player.xpEarned();
+
+/**
+ * Get inventory component  
+ */
+player.getInventoryComponent();
+
+/**
+ * Get raw component
+ */
+player.getRawPlayerComponent();
+
+/**
+ * Player query
+ * Query list:
+ * "isClimbing"
+ * "isFalling"
+ * "isFlying"
+ * "isGliding"
+ * "isInWater"
+ * "isJumping"
+ * "isOnGround"
+ * "isSneaking"
+ * "isSprinting"
+ * "isSwimming"
+ */
+player.Query(query);
 ```
 
 <br />
+
 ### FormClass
 - [ServerUI Docs](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server-ui/minecraft-server-ui)
 
@@ -477,7 +555,7 @@ const form = new FormClass(type)
   .addDropdown(dropdown)
   .addSlider(slider)
   .addTextField(textField)
-  .addToggle(toggle)
+  .addToggle(toggle);
   
  /**
   * Showing the form 
@@ -493,11 +571,13 @@ const ui = new FormClass("action")
   .setBody("body")
   .addButton("button", "icon/path")
   .sendForm(playerObj)
-  .then((response) => {});
+  .then(function (response) {});
 ```
 
 <br />
+
 ### ChatClass
+
 ```javascript
 /**
  * Chat class 
@@ -533,7 +613,9 @@ chat.runCommands(cmds);
 ```
 
 <br />
+
 ### ErrorClass
+
 ```javascript
 /**
  * Error class 
@@ -583,6 +665,7 @@ const activeForm = Form.SendActiveForm(formId, playerObj);
 ```
 
 <br />
+
 ### Formatter
 - `rainbowText(text)`
 - `metricNumbers(number)`
@@ -598,6 +681,7 @@ const raimbow = Formatter.rainbowText("hello world");
 ```
 
 <br />
+
 ### MS
 - `Format(number, { compactDuration, fullDuration, avoidDuration })`
 - `toMiliseconds(number)`
@@ -611,10 +695,12 @@ const ms = MS.Format(1000);
 ```
 
 <br />
+
 ### Timer 
 - `setTickInterval(callback, tick)`
 - `setTickTimeout(callback, tick)`
-- `setInfinityLoop(callback)`
+- `runInfinityLoop(callback)`
+- `runNextTick(callback)`
 - `sleep(tick)`
 - `clearTick(timerId)`
 
@@ -634,6 +720,7 @@ Timer.clearTick(interval);
 ```
 
 <br />
+
 ### Validation
 - `isString(string)`
 - `isNumber(number)`
@@ -656,14 +743,15 @@ Validation.isArray(obj); // return false
 ```
 
 <br />
+
 ### World
-- `getOnlinePlayers(asNumber?)`
+- `getOnlinePlayers()`
 
 ```javascript
 /**
  * Example, online player counter
  */
-World.getOnlinePlayers(true); // return number
+World.getOnlinePlayers(); // return Player[] or Array<Player>
 
 /**
  * Example, get online players name 
