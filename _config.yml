@@ -1,7 +1,7 @@
 title: JustSkyDev
 description: Docs Libs
 
-remote_theme: CloudCannon/edition-jekyll-template@latest
+remote_theme: pages-themes/minimal@v0.2.0
 plugins:
 - jekyll-remote-theme
 
