@@ -11,7 +11,7 @@
     Bedrock API is a library built using Minecraft Bedrock Scripting API. This library will help you keep your code clean and make it easier to interact with the Scripting API, while including a lot of new classes/functions/methods for you to use! and some built-in custom command
     <br />
     <br />
-    <a href="https://github.com/JustSkyDev/Bedrock-API">View</a>
+    <a href="https://github.com/JustSkyDev/Bedrock-API">Repository</a>
     ·
     <a href="https://github.com/JustSkyDev/Bedrock-API/issues">Bug Report</a>
     ·
@@ -127,14 +127,14 @@
 </details>
 
 ## Information
-I have included all the modules here in the `class.chain.js` file in the `plugins` folder or you can also call them directly from `export.modules.js` in the `@modules` folder.
+I have included all the modules here in the `@modules.js` file in the `plugins` folder or you can also call them directly from `modules.js` in the `@modules` folder.
 
 `Default command Prefix is: "!"`
 
 <br />
 
 ## Import guide
-- from `class.chain.js`
+- from `@modules.js`
 
 ```javascript
 /**
@@ -142,7 +142,7 @@ I have included all the modules here in the `class.chain.js` file in the `plugin
  */
 import { className } from "./@modules";
 ```
-- from `@modules/export.modules.js`
+- from `@modules/modules.js`
 
 ```javascript
 /**
@@ -632,7 +632,9 @@ error.CustomError(classname, where, stack);
 ```
 
 <br />
+
 ### FailedClass
+
 ```javascript
 /**
  * Failed class 
